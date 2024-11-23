@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.message {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 94%;
+       
+    }
+}
+
+.form {
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    flex: 1;
+    order: 1; 
+}
+.input:focus {
+    outline: none;
+}
+
+.add {
+    border: none;
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    order: 2; 
+}
+
+.tasks {
+    background-color: #eee;
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.tasks .task {
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    border: 1px solid #ccc;
+    position: relative;
+    cursor: pointer;
+    
+}
+.tasks .task:not(:last-child) {
+    margin-bottom: 15px;
+}
+.tasks .task:hover {
+    background-color: #f7f7f7;
+}
+.tasks .task.done {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.tasks .task .text {
+    flex: 1;
+    order: 1; 
+    text-align: left;
+}
+
+.tasks .task span {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none ;
+    order: 2;
+}
+
+.tasks .task .edit {
+    background-color: rgb(54, 54, 155);
+    color: white;
+    margin-left: 10px; 
+    position: absolute;
+    right:12%
+}
+
+@media (max-width:350px){
+    .tasks .task .edit{
+        right: 25%;
+    }
+}
+
+@media (min-width:351px) and (max-width:422px){
+    .tasks .task .edit{
+        right: 22%;
+    }
+}
+
+
+@media (min-width:423px) and (max-width:622px){
+    .tasks .task .edit{
+        right: 18%;
+    }
+}
+
+.tasks .task .del {
+    background-color: red;
+    color: white;
+}
+
+.clear-all {
+    border: none;
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+    width: 100px;
+    margin: 10px auto;
+}
+
